@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 指定网页的编码-->
+    <meta charset="utf-8">
+    <!-- 如果是ie浏览器 使用最新的渲染引擎来解析页面 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 移动的端的适口设置-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title></title>
+
+    <!-- Bootstrap 核心css文件引入 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container{
+            border: 1px solid red;
+            height: 2000px;
+        }
+
+        .row{
+            min-height: 50px;
+            background-color: #ccc;
+            margin-top:20px;
+        }
+
+        .row div{
+            height: 50px;
+            background-color: palegreen;
+        }
+
+        .row div:nth-child(odd){
+            background-color: coral;
+        }
+
+        .row div .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 行-->
+        <div class="row">
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">2</div>
+            <div class="col-xs-1">3</div>
+            <div class="col-xs-1">4</div>
+            <div class="col-xs-1">5</div>
+            <div class="col-xs-1">6</div>
+            <div class="col-xs-1">7</div>
+            <div class="col-xs-1">8</div>
+            <div class="col-xs-1">9</div>
+            <div class="col-xs-1">10</div>
+            <div class="col-xs-1">11</div>
+            <div class="col-xs-1">12</div>
+        </div>
+        <h4>lg: 只能适配大屏幕</h4>
+        <div class="row">
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6"></div>
+        </div>
+        
+        <h4>md:适配中等以上的屏幕</h4>
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6"></div>
+        </div>
+        
+        <h4>sm:适配pad小屏以上的屏幕</h4>
+        <div class="row">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6"></div>
+        </div>
+        
+        <h4>xs:可以适配所有的屏幕</h4>
+        <div class="row">
+            <div class="col-xs-6"></div>
+            <div class="col-xs-6"></div>
+        </div>
+
+        <h4>布局：列数相加之和 超过12会换行</h4>
+        <div class="row">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3"></div>
+        </div>
+
+        <!-- 行-->
+        <div class="row">
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">2</div>
+            <div class="col-xs-1">3</div>
+            <div class="col-xs-1">4</div>
+            <div class="col-xs-1">5</div>
+            <div class="col-xs-1">6</div>
+            <div class="col-xs-1">7</div>
+            <div class="col-xs-1">8</div>
+            <div class="col-xs-1">9</div>
+            <div class="col-xs-1">10</div>
+            <div class="col-xs-1">11</div>
+            <div class="col-xs-1">12</div>
+        </div>
+        <h4>col-xs-push-n：向右偏移n列</h4>
+        <div class="row">
+            <div class="col-xs-4  col-xs-push-4">4</div>
+        </div>
+        <h4>col-md-pull-n 向左偏移n列</h4>
+        <div class="row">
+            <div class="col-md-5 col-md-push-3">5</div>
+            <div class="col-md-3 col-md-pull-5">3</div>
+        </div>
+        <h4> col-lg-offset-n 整体向右偏移n列</h4>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4 ">4</div>
+            <div class="col-lg-2">2</div>
+        </div>
+
+        <h4>栅格可以嵌套 ：每一个列　又可以划分为12列</h4>
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6">
+                <div class="col-lg-6"></div>
+                <div class="col-lg-6"></div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+                <div class="col-xs-10 col-xs-push-1 red"></div>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+
+
+        <h4>响应式栅格</h4>
+        <div class="row">
+            <div class="col-lg-4 col-md-3 col-sm-1 col-xs-1 "></div>
+            <div class="col-lg-4 col-md-3 col-sm-1 col-xs-10"></div>
+            <div class="col-lg-4 col-md-6 col-sm-10 col-xs-1"></div>
+        </div>
+
+
+
+
+    </div>
+
+<!--  务必先入jquery-->
+    <script src="lib/jquery/jquery.min.js"></script>
+<!-- 引入bootstrap核心js文件 -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
