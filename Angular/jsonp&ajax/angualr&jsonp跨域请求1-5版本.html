@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="Democontroller"></div>
+
+    <script src="./angular-1.5.9.js"></script>
+    <script>
+        angular
+        .module('myApp',[])
+        .controller("Democontroller",["$scope","$http",function ($scope,$http) {
+            // var src = 'https://www.apiopen.top/weatherApi?city=%E6%88%90%E9%83%BD&callback=JSON_CALLBACK';
+            var src = "https://ch.jd.com/homecate2?source=pc&_=1500541730218&callback=JSON_CALLBACK"
+            
+            $http
+            // jsonp只能请求
+            .jsonp(src)
+            .then(function(info){
+                
+                console.log(info)
+                
+            })
+        }])
+            
+       
+
+
+    </script>
+</body>
+</html>

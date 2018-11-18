@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span{
+            display: block;
+        }
+    </style>
+</head>
+<body ng-app='kafuka'>
+    <div ng-controller="kaka">
+        <!-- <zhangdb></zhangdb> -->
+        <div zhangdb></div>
+        <span ng-click="zhang()">单击一下</span>
+        <span>{{ name }}</span>
+        <span ng-click="wang()">kakak</span>
+        <!-- <span>{{ xingge }}</span> -->
+    </div>
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('kafuka',[])
+        .directive('zhangdb', function  () {
+            return {
+                template:'<h1>我是一个兵</h1>'
+            }
+        })
+        .controller('kaka',["$scope",function  ($scope) {
+            var wuzetian = {
+                name:"武则天"
+            }
+            $scope.zhang = function  (arguments) {
+                var newkaka = angular.copy(wuzetian);
+                $scope.name = newkaka.name
+            }
+            $scope.wang = function  (arguments) {
+                // var newkaka = angular.copy(wuzetian);
+                $scope.name = "赵丽颖"
+            }
+        }])
+        // var user = {
+        //     age:12,
+        //     name:'zhangdongbin'
+        // }
+        // var user2 = angular.copy(user)
+        // // console.log(angular.isNumber(38));
+        // console.log(user2);
+        
+    </script>
+</body>
+</html>

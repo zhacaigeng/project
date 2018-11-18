@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="Democontroller">
+        <input type="text" ng-model="searchText">
+        <p ng-repeat="todo in todoList | filter:{ isCompleted:searchText}">{{ todo}}</p>
+    </div>
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('myApp',[])
+        .controller('Democontroller',function ($scope) {
+            $scope.todoList=[
+            {id:1, name: "抽烟", isCompleted:'false'},
+            {id:1, name: "喝酒", isCompleted:'true'},
+            {id:1, name: "烫头发", isCompleted:'false'},
+            {id:1, name: "1111", isCompleted:'true'},
+            {id:1, name: "3333", isCompleted:'false'}
+            
+            ];
+            $scope.searchText = '';
+        })
+    </script>
+</body>
+</html>

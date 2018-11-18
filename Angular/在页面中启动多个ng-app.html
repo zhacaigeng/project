@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="zhang"  ng-controller="DemoController">
+        <p>{{ name }}</p>
+    </div>
+    <!-- <div id="dv" ng-app="myapp" ng-controller="TestController"> -->
+        <!-- <p>{{ name }}</p> -->
+    <!-- </div> -->
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('kaka',[])
+        .controller('DemoController',function ($scope) {
+            var vm = $scope;
+            vm.name = 'nidaye'
+        })
+        angular.element(function () {
+            var dv = document.getElementById('zhang');
+            angular.bootstrap(dv,['kaka']);
+        })
+        // 手动启动不需要单独通过ng-app启动，只需要调用angular.bootstrap()
+        //将dom对象和模块作为参数传入，那么这个dom对象和模块就绑定一起了
+        // angular
+        // .module('testApp',[])
+        // .controller('TestController',function ($scope) {
+        //     $scope.name = 'jack';
+        // });
+        // angular.element(function () {
+        //     var dv = document.getElementById('dv');
+        //     angular.bootstrap(dv,['testApp']);
+        // })
+    </script>
+</body>
+</html>

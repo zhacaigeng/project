@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./angular.js"></script>
+    <script>
+    // var url = https://ch.jd.com/homecate2?callback=test&source=pc&_=1500541730218
+    
+    
+    //先生成一个script标签，设置src
+    
+    //    
+    function jsonp(url,params,callback){
+                url+="?";
+                for(var k in params){
+                    url+= k + '=' + params[k]+'&';
+                }
+                // console.log(url);
+                url+='callback=test';
+                // console.log(url);
+                //动态创建script标签
+                var script = document.createElement('script');
+                script.src = url;
+                document.head.appendChild(script); 
+                window.test = function(info){
+                    // console.log(info.cateList);
+                    var infojd = info.cateList;
+                    callback(infojd);
+                }
+        }
+        
+        jsonp(' https://ch.jd.com/homecate2',{
+            source:"pc",
+            _:1500541730218,
+            },
+            function(info){
+                console.log(info);
+            })
+
+    </script>
+</body>
+</html>

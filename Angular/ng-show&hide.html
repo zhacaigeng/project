@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-app="myapp">
+    <div ng-controller="Democontroller">
+        <h1 ng-if="true">展示和隐藏</h1>
+        <!-- <h1 ng-show='isShow'>张栋斌</h1> -->
+        <!-- <hr> -->
+        <input type="text" ng-model="name">
+        <div ng-switch="name">
+            <p ng-switch-when="jack">我是jack</p>
+            <p ng-switch-when="tom">我是tom</p>
+            <p ng-switch-when="rose">我是rose</p>
+            <p ng-switch-when="Amy">我是Amy</p>
+            <input type="checkbox" ng-model="CheckBox">
+
+        </div>
+        <!--<input type="checkbox" ng-model="isChecked"> -->
+        
+
+
+    </div>
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('myapp',[])
+        .controller('Democontroller',function ($scope) {
+            // $scope.isShow = true;
+            // $scope.name = 'jack'
+            $scope.CheckBox = false;
+        })
+    </script>
+</body>
+</html>

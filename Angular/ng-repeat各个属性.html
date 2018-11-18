@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="Democontroller">
+    <p ng-repeat="item in arr track by $index" class="{{ $even? 'red':'green'}}" id="{{ $index }}">{{ item }}</p>
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('myApp',[])
+        .controller('Democontroller',function ($scope) {
+            $scope.arr=['吃豆腐脑','睡觉','吃饭','打豆豆','你是痘痘'];
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-app="myapp" ng-controller="zhangzhang">
+    <input type="text" ng-model="name">
+    <h1>Hello {{ name }}</h1>
+    <input type="button" value="+1" ng-click='name = (name-0)+1'>
+    <input type="checkbox" ng-model="checkcheck">
+    <div ng-show="checkcheck">我是check</div>
+    <input type="button" value="点我" ng-click="sub()">
+    <div>{{ zhangliang }}</div>
+
+    <!-- <input type="text" ng-model="name1">
+    <input type="text" ng-model="name2">
+    <input type="button" ng-click="name3=(name1-0)+(name2-0)">
+    <input type="text" ng-model="name3"> -->
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('myapp',[])
+        .controller('zhangzhang',["$scope",zhangfun])
+        function zhangfun($scope){
+            var vm = $scope;
+            vm.sub = function () {
+                vm.zhangliang = "点我之后"
+            }
+            
+        }
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-app="myapp" ng-controller="contro">
+
+    <input type="text" name="" id="" ng-model="text01">
+    <script src="./angular.js"></script>
+    <script src="./jquery.js"></script>
+    <script>
+        angular
+        .module('myapp',[])
+        .controller('contro',function ($scope) {
+            var vm = $scope;
+            vm.text01 = 'jack';
+            vm.$watch('text01',function (newValue,oldValue) {
+                console.log('新名字为'+newValue+"旧名字为"+oldValue);
+                vm.text01
+            })
+        })
+        // angular作为添加jquery组件
+
+        
+    </script>
+</body>
+</html>

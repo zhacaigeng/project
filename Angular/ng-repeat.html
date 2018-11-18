@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-app="myapp">
+    <div ng-controller="DemoController">
+        <!-- <p ng-repeat="item in arr">{{ item }}</p> -->
+        <span ng-cloak>{{ name }}</span>
+        <span class="ng-cloak">{{ name }}</span>
+        <!-- <p ng-repeat="(key,value) in arr ">键名：{{ key }}&键值{{ value }}</p> -->
+    </div>
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('myapp',[])
+        .controller('DemoController',function ($scope) {
+            // $scope.arr=['吃饭','睡觉','打豆豆','喝水','喝豆浆'];
+            $scope.arr = {
+                name:'zhang',
+                age:'19',
+                sex:"man",
+                name:'zhang'
+            }
+            $scope.name = 'zhangsnafneg';
+
+        })
+    </script>
+</body>
+</html>

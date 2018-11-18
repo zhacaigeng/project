@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="Democontroller">
+
+    </div>
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('myApp',[])
+        .controller('Democontroller',['$scope',"$http","$sce",function ($scope,$http,$sce) {
+            // var url = "https://ch.jd.com/homecate2?callback=test&source=pc&_=1500541730218"
+            var url="https://www.apiopen.top/journalismApi"
+            //这是1,。5之前的版本
+            // $http({
+            //     method:'GET',
+            //     url:url
+            // })
+            
+            // .then(function (params) {
+            //     console.log(params.data.subjects)
+            // })
+            // var ret = $sce.trustAsResourceUrl(url)
+            $http
+            // .jsonp(ret,{
+            //     jsonpCallbackParam:'callback'
+            // })
+            .jsonp(url)
+            .then(function (params) {
+                console.log(typeof params)
+            })
+        }])
+    </script>
+</body>
+</html>

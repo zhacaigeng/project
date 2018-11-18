@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div ng-app="zhangdongbin">
+        <div ng-controller="parent">
+                <button ng-click="btn()">点击一下</button>
+                <input type="text" ng-model="nidaye">
+            <div ng-controller="child">
+                <input type="text" ng-model="guojia">
+                
+                
+            </div>
+        </div>
+    </div>
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('zhangdongbin',[])
+        .factory('nihao',function  () {
+            return {
+                name:'hongxiguan'
+            }
+        })
+        .controller('child',['$scope',function ($scope) {
+            $scope.$on("messageSecure",function  (event,data) {
+                console.log(data);
+            })
+        }])
+        .controller('parent',['$scope','nihao',function ($scope, nihao) {
+            $scope.btn = function  () {
+                // console.log('ppp');
+                $scope.guojia="kafuka"
+                console.log(nihao.name);
+                var text = $scope.guojia;
+                $scope.$broadcast("messageSecure",{message:text})
+            }
+        }])
+    </script>
+</body> 
+</html>

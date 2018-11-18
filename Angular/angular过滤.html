@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body ng-app="myapp">
+    
+    <div ng-controller="zhang" class="all">
+
+            <!-- <input type="checkbox" ng-model="isComplete"> -->
+            <input type="button" ng-click="submit()" value="click">
+            <div ng-repeat="todo in list | filter:{age:zhang}" >{{ todo.name }}</div>
+    </div>
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('myapp',[])
+        .controller('zhang',["$scope",function ($scope) {
+            var vm = $scope;
+            vm.list = [{name:'jack',age:18},
+                      {name:'tom',age:17},
+                         {name:'amy',age:19}]
+            vm.submit=function(){
+                vm.zhang = 19;
+            };
+                
+                
+        }])
+    </script>
+</body>
+</html>

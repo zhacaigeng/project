@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="Democontroller"></div>
+
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('myApp',[])
+        .controller("Democontroller",["$scope","$http","$sce",function ($scope,$http,$sce) {
+            // var src = 'https://www.apiopen.top/journalismApi';
+            // var src = "https://www.apiopen.top/weatherApi?city=%E6%88%90%E9%83%BD"
+            // var src = "./data.json"
+            var src = "https://www.apiopen.top/journalismApi";
+            // var src = "https://ch.jd.com/homecate2?source=pc&_=1500541730218";
+            $http
+            ({
+                method:"GET",
+                url:src
+            })
+            .then(function (params) {
+                console.log(params);
+            })
+            // ({
+            //     method:"POST",
+            //     url:src
+            // })
+            
+            // .then(function(info){
+            //     console.log(info);
+            // })
+        }])
+            // var ret = $sce.trustAsResourceUr(url);
+            // $http
+            // .jsonp(ret,{
+            //     jsonpCallbackParam: 'callback'
+            // })
+            // .then(function(info){
+            //     console.log(info);
+            // })
+             // 1.6 中对请求的URL做了安全限制，只有 angular 信任的URL 才能被访问
+       
+
+
+    </script>
+</body>
+</html>

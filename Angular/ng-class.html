@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clsBg{
+            background-color: red;
+        }
+        .clsFs{
+            background-color: green;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="Democontroller">
+    <!-- <input type="checkbox" ng-model="hasBg"> -->
+    <p ng-class="clsBg">这是内容</p>
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('myApp',[])
+        .controller('Democontroller',function ($scope) {
+            $scope.clsBg = "clsFs";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="Democontroller"></div>
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('myApp',[])
+        .service('seviceName',function ($window) {
+            this.say= function(){
+                console.log('这是服务中的方法')
+            }
+        })
+        .controller('Democontroller',function ($scope) {
+            
+        })
+    </script>
+</body>
+</html>

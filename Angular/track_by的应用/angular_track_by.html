@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p{
+            display: block;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="Democontroller">
+        <button ng-click="dong()">插入</button>
+        <input type="text" ng-model="searchText">
+        <p ng-repeat="todo in todoList" ng-click="zhang(todo)">{{ todo}}</p>
+    </div>
+    <script src="./angular.js"></script>
+    <script>
+        angular
+        .module('myApp',[])
+        .controller('Democontroller',function ($scope) {
+            $scope.todolist = ["1","1","2","2","3"]
+            // $scope.todoList=[
+            // {id:1, name: "抽烟", isCompleted:'false'},
+            // {id:1, name: "抽烟", isCompleted:'false'},
+            // {id:1, name: "喝酒", isCompleted:'true'},
+            // {id:1, name: "烫头发", isCompleted:'false'},
+            // {id:1, name: "1111", isCompleted:'true'},
+            // {id:1, name: "3333", isCompleted:'false'}
+            
+            // ];
+            $scope.searchText = '';
+            $scope.zhang = function (index) {
+                console.log(index);
+            }
+            $scope.dong = function () {
+                $scope.todoList.splice(1,1)
+            }
+        })
+    </script>
+</body>
+</html>
