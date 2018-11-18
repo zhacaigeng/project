@@ -10,16 +10,22 @@
 <body>
 
 <div id="example"></div>
-<script>
+<script type="text/babel">
     class Toggle extends React.Component{
-      constructor(props){
-        super(props);
-        
-      }
-      handler(){
-
-      }
+        // constructor(props){
+        //     super(props);
+        // }
+        render(){
+            return <Nihao />
+        }
     }
+    function Nihao (props) {
+        // body
+        return (
+          <div>Hello</div>
+        )
+    }
+    
     ReactDOM.render(
       <Toggle />,
       document.getElementById('example')
