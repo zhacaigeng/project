@@ -1,0 +1,36 @@
+<!--电影列表开始-->
+<div class="list">
+  <ul>
+    <li ng-repeat="movie in data.subjects track by $index">
+      <a href="#/details/{{movie.id}}">
+        <!-- 浏览器解析到图片的src属性以后，立马就会发送请求，获取图片，但是这个时候
+        angular的代码还没有解析所以： {{ movie.images.large }} 就直接被当作 图片的路径了
+        ，需要通过 ng-src 这个指令来指定，将来 angular 解析 ng-src 指令，会给当前元素添加 src 属性 -->
+        <img ng-src="{{ movie.images.large }}" alt="">
+      </a>
+      <div class="meta">
+        <h4><span>{{ movie.title }}</span> <em>{{ movie.rating.average }}分</em></h4>
+        <div class="otherinfo">类型:<span ng-repeat="gen in movie.genres track by $index">{{ gen }}</span></div>
+      </div>
+    </li>
+
+  </ul>
+  <div class="paging">
+    <label>总共：{{ data.total }}条记录,第{{page}}/{{totalPage}}页;</label>
+    <!-- 加上disable类样式，表示按钮禁用状态 -->
+    <button class="prev" ng-class="{disable: page <= 1}" ng-click="goPage(page - 1)">上一页</button>
+    <button class="next" ng-class="{disable: page >= totalPage}" ng-click="goPage(page - 0 + 1)">下一页</button>
+  </div>
+</div>
+<!--电影列表结束-->
+
+<!-- 加载动画 -->
+<div class="loading_mask" ng-show="isLoading">
+  <div class="spinner">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+  </div>
+</div>

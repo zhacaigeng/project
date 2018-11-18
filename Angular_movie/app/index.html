@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>电影展示</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/wap.css">
+</head>
+
+<body ng-app="moviecat">
+    <!-- 顶部导航栏开始 -->
+    <div class="top">
+        <div class="header" ng-controller="SearchController">
+            <a href="#/home_page"><img src="assets/img/logo.png" alt=""></a>
+            <div class="search">
+                <input class="my-input" type="text" placeholder="电影搜索" ng-model="searchText">
+                <button ng-click="search()">搜索</button>
+            </div>
+        </div>
+        <nav class="nav" menu-active>
+            <!-- 通过自定义指令实现菜单高亮效果 -->
+        </nav>
+    </div>
+    <!-- 顶部导航栏结束 -->
+
+    <div class="container" ng-view>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>版权所有&copy; 前端与移动开发学院 前端(允许侵权)</p>
+        </div>
+    </footer>
+
+    <!-- 自动给 C3 样式添加浏览器兼容的前缀 -->
+    <script src="assets/js/prefixfree.min.js"></script>
+
+    <!-- angular.js -->
+    <script src="../node_modules/angular/angular.js"></script>
+    <!-- angular-route.js -->
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+    <!-- 主模块 -->
+    <script src="app.js"></script>
+    <!-- 子模块: JSONP服务模块 -->
+    <script src="./common/jsonp-service.js"></script>
+    <!-- 子模块: 首页模块 -->
+    <script src="./home_page/controller.js"></script>
+    <!-- 子模块: 电影列表模块 -->
+    <script src="./movielist/controller.js"></script>
+    <!-- 子模块: 电影详情模块 -->
+    <script src="./details/controller.js"></script>
+    <!-- 子模块: 电影搜索模块 -->
+    <script src="./search/controller.js"></script>
+    <!-- 子模块: 自定义指令模块 -->
+    <script src="./common/directives/menu-active.js"></script>
+</body>
+
+</html>
