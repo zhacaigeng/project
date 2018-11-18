@@ -1,0 +1,109 @@
+<html class="gr__news_ycombinator_com" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="referrer" content="origin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/news.css" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <title><%= title %></title>
+</head>
+<body data-gr-c-s-loaded="true">
+  <center>
+    <table id="hnmain" border="0" cellpadding="0" cellspacing="0" width="85%" bgcolor="#F6F6EF">
+      <tbody>
+        <tr>
+          <td bgcolor="#FF6600">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:2px">
+              <tbody>
+                <tr>
+                  <td style="width:18px;padding-right:4px">
+                    <a href="http://www.ycombinator.com"><img src="../resources/images/y18.gif" width="18" height="18" style="border:1px white solid;" alt="" /></a>
+                  </td>
+                  <td style="line-height:12pt; height:10px;">
+                    <span class="pagetop">
+                      <b class="hnname"><a href="news">Hacker News</a></b> 
+                      <a href="newest">new</a> | <a href="threads?id=zxhoo">threads</a> | <a href=
+                      "newcomments">comments</a> | <a href="show">show</a> | <a href="ask">ask</a> | <a href="jobs">jobs</a> | <a href="submit">submit</a>
+                    </span>
+                  </td>
+                  <td style="text-align:right;padding-right:4px;">
+                    <span class="pagetop">
+                      <a href="user?id=zxhoo">zxhoo</a> (1) | <a href="logout?auth=b08453863e256b857456e00eb6f3b3ed6ed6a952&amp;goto=item%3Fid%3D13720271">logout</a>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr style="height:10px">
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <table border="0">
+              <tbody>
+                <tr class="athing" id="13720271">
+                  <td align="right" valign="top" class="title"></td>
+                  <td valign="top" class="votelinks">
+                    <center>
+                      <!-- <a id="up_13720271" onclick="return vote(event, this, &quot;up&quot;)" href="vote?id=13720271&amp;how=up&amp;auth=85b8c0d14a13d81f87e9a0aaffd4c6897dd94647&amp;goto=item%3Fid%3D13720271"></a> -->
+                      <div class="votearrow" title="upvote"></div>
+                    </center>
+                  </td>
+                  <td class="title">
+                    <a href="item?id=13720271" class="storylink"><%= title %></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+                  <td class="subtext">
+                    <span class="score" id="score_13720271">6 points</span> by <a href="user?id=hluio" class="hnuser">hluio</a> 
+                    <span class="age"><a href="item?id=13720271">5 hours ago</a></span>
+                    <span id="unv_13720271"></span>
+                    | <a href="hide?id=13720271&amp;goto=item%3Fid%3D13720271&amp;auth=85b8c0d14a13d81f87e9a0aaffd4c6897dd94647">hide</a>
+                    | <a href=
+                    "https://hn.algolia.com/?query=Ask%20HN%3A%20Do%20you%20have%20physical%20ailments%20from%20sitting%20all%20day%3F&amp;sort=byDate&amp;dateRange=all&amp;type=story&amp;storyText=false&amp;prefix&amp;page=0"
+                    class="hnpast">past</a> | <a href="https://www.google.com/search?q=Ask%20HN%3A%20Do%20you%20have%20physical%20ailments%20from%20sitting%20all%20day%3F">web</a> | <a href=
+                    "item?id=13720271">7&nbsp;comments</a> | <a href="fave?id=13720271&amp;auth=85b8c0d14a13d81f87e9a0aaffd4c6897dd94647">favorite</a>
+                  </td>
+                </tr>
+                <tr style="height:2px">
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+                  <td>
+                    <%= text %>
+                  </td>
+                </tr>
+                <tr style="height:10px">
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="../resources/images/s.gif" height="10" width="0" alt="" />
+            <table width="100%" cellspacing="0" cellpadding="1">
+              <tbody>
+                <tr>
+                  <td bgcolor="#FF6600"></td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <center><span class="yclinks"><a href="newsguidelines.html">Guidelines</a> | <a href="newsfaq.html">FAQ</a> | <a href="mailto:hn@ycombinator.com">Support</a> | <a href=
+              "https://github.com/HackerNews/API">API</a> | <a href="security.html">Security</a> | <a href="lists">Lists</a> | <a href="bookmarklet.html">Bookmarklet</a> | <a href="dmca.html">DMCA</a> | <a href=
+              "http://www.ycombinator.com/apply/">Apply to YC</a> | <a href="mailto:hn@ycombinator.com">Contact</a></span><br />
+              <br />
+              <form method="get" action="//hn.algolia.com/">Search: <input type="text" name="q" value="" size="17" autocorrect="off" spellcheck="false" autocapitalize="off" autocomplete="false" /></form>
+            </center>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </center>
+</body>
+</html>

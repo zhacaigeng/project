@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>学员信息管理系统 - 学生信息列表</title>
+  <style>
+    table {
+      width: 1200px;
+    }
+
+    table thead tr th {
+      height: 35px;
+    }
+
+    table tbody tr td {
+      height: 25px;
+    }
+  </style>
+  <script src="./js/jquery-3.2.1.js"></script>
+  <script src="./js/zhang.js"></script>
+</head>
+
+<body>
+  <h1>学员信息管理系统</h1>
+  <a href="/info?_id="></a>
+  <p><a id="addLink" href="#">添加学员</a></p>
+  <p>
+    <button id="btnLoad">加载数据</button>
+  </p>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>出生日期</th>
+        <th>联系电话</th>
+        <th>所属地</th>
+        <th>专业</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody id="stbody">
+
+    </tbody>
+  </table>
+
+  <!-- 学院详情信息 -->
+  <div id="dvInfo" style="display: none">
+    <h1>学员详情</h1>
+    <ul>
+
+    </ul>
+    <button id="btnCloseInfo">关闭</button>
+
+  </div>
+
+
+
+  <!-- 显示添加学员界面 -->
+  <div id="dvAdd" style="display: none;">
+    <h1>添加学员</h1>
+    <form id="addForm">
+      <div>
+        <label for="sno">学号：</label>
+        <input type="text" name="sno" id="sno" value="">
+      </div>
+      <div>
+        <label for="sname">姓名：</label>
+        <input type="text" name="sname" id="sname" value="">
+      </div>
+      <div>
+        <span>性别：</span>
+        <label for="smale">男</label>
+        <input type="radio" name="sgender" id="smale" value="M">
+        <label for="sfemale">女</label>
+        <input type="radio" name="sgender" id="sfemale" value="F">
+      </div>
+      <div>
+        <label for="sbirthday">生日：</label>
+        <input type="date" name="sbirthday" id="sbirthday" value="">
+      </div>
+      <div>
+        <label for="sphone">电话：</label>
+        <input type="text" name="sphone" id="sphone" value="">
+      </div>
+      <div>
+        <label for="saddress">籍贯：</label>
+        <select name="saddr" id="saddr">
+
+        </select>
+      </div>
+      <div>
+        <label for="smajor">专业：</label>
+        <select name="smajor" id="smajor">
+
+        </select>
+      </div>
+      <div>
+        <input type="submit" value="保存学员信息" id="btnSave">
+        <input type="button" value="关闭" id="btnCloseAdd">
+      </div>
+    </form>
+  </div>
+
+
+
+  <!-- 显示编辑页面信息 -->
+  <div id="dvEdit" style="display: none;">
+    <h1>添加学员</h1>
+    <form id="editForm">
+      <input type="hidden" name="_idEdit" id="_idEdit" value="">
+      <div>
+        <label for="sno">学号：</label>
+        <input type="text" name="sno" id="snoEdit" value="">
+      </div>
+      <div>
+        <label for="sname">姓名：</label>
+        <input type="text" name="sname" id="snameEdit" value="">
+      </div>
+      <div>
+        <span>性别：</span>
+        <label for="smale">男</label>
+        <input type="radio" name="sgender" id="smaleEdit" value="M">
+        <label for="sfemale">女</label>
+        <input type="radio" name="sgender" id="sfemaleEdit" value="F">
+      </div>
+      <div>
+        <label for="sbirthday">生日：</label>
+        <input type="date" name="sbirthday" id="sbirthdayEdit" value="">
+      </div>
+      <div>
+        <label for="sphone">电话：</label>
+        <input type="text" name="sphone" id="sphoneEdit" value="">
+      </div>
+      <div>
+        <label for="saddress">籍贯：</label>
+        <select name="saddr" id="saddrEdit">
+
+        </select>
+      </div>
+      <div>
+        <label for="smajor">专业：</label>
+        <select name="smajor" id="smajorEdit">
+
+        </select>
+      </div>
+      <div>
+        <input type="submit" value="保存学员信息" id="editbtnSave">
+        <input type="button" value="关闭" id="btnCloseEdit">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
