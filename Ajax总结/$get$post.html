@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>发送请求</button>
+    <div></div>
+
+
+    <script src="jquery.min.js"></script>
+    <script>
+        var button = document.querySelector('button');
+        button.onclick = function () {
+            $.getJSON('zhang.json',function (params) {
+                console.log(typeof params);
+                // var params = JSON.parse(params);
+                var html = '';
+
+                for (var i = 0; i < params.length; i++) {
+
+                    html += '<tr>';
+                    html += '<td>' + params[i].name + '</td><br>';
+                    html += '<td>' + params[i].from + '</td><br>';
+                    html += '<td>' + params[i].contary + '</td><br>';
+                    html += '</tr>';
+                };
+                document.querySelector('div').innerHTML = html;
+            })
+
+
+        }
+        
+    </script>
+
+
+</body>
+
+</html>

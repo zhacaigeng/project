@@ -1,0 +1,21 @@
+[
+    {
+        "name":"zhangdongbin",
+        "sex":"nam",
+        "from":"shandong",
+        "contary":"china"
+    },
+    {
+        "name":"liuhulan",
+        "sex":"nam",
+        "from":"hebei",
+        "contary":"china"
+    },
+    {
+        "name":"jiangliang",
+        "sex":"nam",
+        "from":"dongbei",
+        "contary":"china"
+    }
+
+]

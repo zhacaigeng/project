@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="get请求" id="btnget">
+    <script src="./jquery.min.js"></script>
+    <script>
+    $('#btnget').click(function  () {
+        // console.log('123');
+        $.ajax({
+            type: "get",
+            url: "./002script.js",
+            dataType: "html",
+            // dataType:'text',
+            success: function (res) {
+                console.log(res);
+                zhang()
+            }
+        });
+    })                
+    
+    </script>   
+</body>
+</html>

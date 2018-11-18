@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="get请求" id="getXML">  
+    <script src="./jquery.min.js"></script>
+    <script>
+    $('#getXML').click(function  () {
+        // console.log('123');
+        $.ajax({
+            type: "get",
+            url: "./002.php",
+            // data: "data",
+            dataType: "xml",
+            success: function (res) {
+                // console.log(res);
+                var name = res.querySelectorAll('name');
+                console.log(name);
+            }
+        });
+    })                
+    
+        
+    </script>   
+</body>
+</html>

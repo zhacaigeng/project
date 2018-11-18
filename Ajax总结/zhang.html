@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>发送请求</button>
+    <div></div>
+
+
+    <script src="jquery.min.js"></script>
+    <script>
+        var button = document.querySelector('button');
+        button.onclick = function () {
+            $.ajax({
+                type: 'get',
+                url: 'http://api.map.baidu.com/telematics/v3/weather',
+                data:{
+                    ak:'zVo5SStav7IUiVON0kuCogecm87lonOj',
+	    	 		location:'上海',
+	    	 		output:'json'
+                },
+                dataType:'json',
+                
+                success: function (info) {
+                // var info = JSON.parse(info);
+                console.log(info,typeof info);
+                var html = '';
+
+                for (var i = 0; i < info.length; i++) {
+
+                    html += '<tr>';
+                    html += '<td>' + info[i].name + '</td><br>';
+                    html += '<td>' + info[i].from + '</td><br>';
+                    html += '<td>' + info[i].contary + '</td><br>';
+                    html += '</tr>';
+                };
+                document.querySelector('div').innerHTML = html;
+            }
+
+
+        })
+        }
+        
+    </script>
+
+
+</body>
+
+</html>

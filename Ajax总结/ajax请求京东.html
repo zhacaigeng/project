@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./jquery.min.js"></script>
+    <script>
+        // var jdurl = "https://ch.jd.com/homecate2?callback=test&source=pc&_=1500541730218"
+        // var jdurl = "https://ch.jd.com/homecate2?source=pc&_=1500541730218"
+        // var jdurl = './data.json';
+        var jdurl = "https://www.apiopen.top/journalismApi";
+
+        // var test = function(msg){
+        //                 console.log(msg);
+        // }
+        $.ajax({
+                url:jdurl,
+                data:"",
+                type:'get',
+                dataType:'json',
+                success:function(msg){
+                    console.log( msg)
+                   
+                }
+            })
+    </script>
+</body>
+</html>
