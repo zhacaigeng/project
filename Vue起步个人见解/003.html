@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1 v-zhang>{{ title }}</h1>
+        <input type="text" v-model="title">
+    </div>
+
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'kaka'
+            },
+            directives: {
+                zhang: {
+                    bind(el) {
+                        console.log(el);
+                    },
+                    inserted(el) {
+                        console.log(el);
+                    },
+                    update(el, binding) {
+                        console.log(el.innerHTML);
+                    },
+                    componentUpdated(el, binding) {
+                        console.log(el.innerHTML);
+                    }
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>

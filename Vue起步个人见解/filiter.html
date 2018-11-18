@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="test">
+                
+        
+                <input type="text" v-model="message | change">
+                <!--用户从input输入的数据在回传到model之前也可以先处理-->
+                <!-- <p>{{message | sum}}</p> -->
+                <!--添加两个过滤器,注意不要冲突-->
+        
+            </div>
+            <script src="./node_modules/vue/dist/vue.js"></script>
+        
+            <script type="text/javascript">
+                // console.log(Vue)
+                Vue.filter('zhangdb', function  (val) {
+                    // console.log(val)?
+                    return val + 9;
+
+                })
+                //        -----------------------------------------华丽分割线(从model->view)---------------------------------------
+                Vue.filter("sum", function (value) { //全局方法 Vue.filter() 注册一个自定义过滤器,必须放在Vue实例化前面
+                    return value + 4;
+                });
+        
+                Vue.filter('cal', function (value, begin, xing) { //全局方法 Vue.filter() 注册一个自定义过滤器,必须放在Vue实例化前面
+                    return value + begin + xing;
+                });
+        
+                //        -----------------------------------------华丽分割线(从view->model)---------------------------------------
+                Vue.filter("change", {
+                    read: function (value) { // model -> view 在更新 `<input>` 元素之前格式化值
+                        return value;
+                    },
+                    write: function (newVal, oldVal) { // view -> model  在写回数据之前格式化值
+                        console.log("newVal:" + newVal);
+                        console.log("oldVal:" + oldVal);
+                        return newVal;
+                    }
+                });
+        
+                var myVue = new Vue({
+                    el: ".test",
+                    data: function  () {
+                        return {
+                            message: 12
+                        }
+                    }
+                });
+            </script>
+</body>
+</html>

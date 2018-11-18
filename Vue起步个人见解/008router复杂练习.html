@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #secondapp {
+            height: 100px;
+            width: 100px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <a href="#/home">home</a>
+        <a href="#/bar">bar</a>
+        <router-view></router-view>
+        <div id="secondapp" @click="zhang"></div>
+    </div>
+    <script src="../admin-vue/node_modules/vue/dist/vue.js"></script>
+    <script src="../admin-vue/node_modules/vue-router/dist/vue-router.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            router: new VueRouter({
+                routes: [{
+                        path: '/',
+                        component: {
+                            template: '<div>你好</div>'
+                        }
+
+                    },
+                    {
+                        path: '/bar',
+                        component: {
+                            template: '<div>你好</div>'
+                        }
+                    },
+                    {
+                        path: '/kaka',
+                        component: {
+                            template: '<div>kaka你好</div>'
+                        }
+                    }
+                ]
+            }),
+            data: function () {
+                return {
+
+                }
+            },
+            methods: {
+                zhang: function () {
+                    this.$options.router.push({
+                        path:'/zhang',
+                        params:{
+                            id:1001
+                        }
+                    });
+                    // console.log(this);
+                    console.log(this.$router.params.id);
+                }
+            }
+        })
+        //
+    </script>
+</body>
+
+</html>
