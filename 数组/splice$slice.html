@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+            //slice应用不会改变原数组
+
+            var zhang = [3,5,6,3,2,5,4,85];
+            console.log(zhang.slice(4)) // [2, 5, 4, 85]
+            console.log(zhang); //3, 5, 6, 3, 2, 5, 4, 85]
+            //splice应用 会改变原数组
+            var wang = [5,2,6,3,2,1,4,5,8,7,4];
+            console.log(wang.splice(2)) //[6, 3, 2, 1, 4, 5, 8, 7, 4]
+            console.log(wang); //[5, 2]
+
+            var li = 'qwertyuio';
+            console.log(li.substr(4),typeof li.substr(4)); //tyuio string
+            console.log(li);//qwertyuio
+            var zhang = 'iamzhang';
+            console.log(zhang.substring(4,6), zhang) //hang iamzhang
+            var sone = [4,51,54,2,1,3,6,4,71,7,8,84,9];
+            console.log(Array.isArray(sone.slice(-3)), sone )
+    </script>
+</body>
+</html>

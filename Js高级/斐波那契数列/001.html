@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(typeof fn);
+        function fn (ele) {
+            switch (ele) {
+                case 1:return 1;
+                    break;
+                case 2:return 2;
+                    break;
+                case 3:return 2;
+                    break;
+                case 4:return 4;
+                    break;
+                default:return fn(ele - 2) + fn(ele - 4)
+                    break;
+            }
+            // if(ele == 1){
+            //     return 1
+            // }else if(ele == 2){
+            //     return 2
+            // }else if(ele == 3){
+            //     return 2
+            // }else{
+            //     return fn(ele - 2) + fn(ele - 4)
+            // }
+        }
+        console.log(fn(9))
+    </script>
+</body>
+</html>

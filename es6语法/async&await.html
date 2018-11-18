@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // async function timeout() {
+        //     // await console.log('456')
+        //     var zhang = await 0;
+        //     console.log(zhang)
+
+        //     return 'hello world';
+
+        // }
+        // timeout()
+        // // .then(result => {
+        // //     console.log(result);
+        // // })
+        // // console.log(timeout());
+        // console.log('虽然在后面，但是我先执行');
+
+
+        // async function basicDemo() {
+        //     var result = await 0;
+        //     // let result = await Math.random();
+        //     console.log(result);
+        // }
+        // // console.log(basicDemo());
+        // basicDemo()
+        // console.log('345')
+
+
+        // const promise = new Promise(function (resolve, reject) {
+        //     resolve('ok');
+        //     throw new Error('test');
+        // });
+        // promise
+        //     .then(function (value) { console.log(value) })
+        //     .catch(function (error) { console.log(error) });
+
+           var pro = Promise.resolve('zhangdongbin');
+           pro.then(function  (val) {
+            //    console.log(val)
+           })
+           var xmlrequest = new XMLHttpRequest();
+           console.log(xmlrequest, typeof xmlrequest)
+
+    </script>
+</body>
+
+</html>

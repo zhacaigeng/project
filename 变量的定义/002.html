@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //引用类型为局部变量
+        // function zhang (ele) {
+        //     ele.name = 'li';
+        //     ele = new Object();
+        //     ele.name = 'nihao'
+        // }
+        // var newobj = new Object();
+        // zhang(newobj);
+        // console.log(newobj.name);
+
+        //值类
+        // var en
+        var ele = {
+            name : 'zhang'
+        }
+        function zhang (en) {
+            en.age = 18;
+        }
+        // var ele = 33;
+        zhang(ele);
+        console.log(ele);
+    </script>
+</body>
+</html>

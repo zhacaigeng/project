@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+			display: none;
+
+			width: 400px;
+			height: 100px;
+			background-color: hotpink;
+			margin-bottom: 10px;
+		}
+</style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <input type="button" value="展示内容" id="btnContent">
+    <input type="button" value="展示div" id="btnShow">
+    <script src="./jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function name(params) {
+        $('#btnContent').click(function name(params) {
+            $('div').text('通过jquery的text方法设置内容')
+        });
+        $('#btnShow').click(function name(params) {
+            $('div').show(3000);
+        })
+
+    })
+
+</script>
+
+
+
+
+
+
+    
+</body>
+</html>

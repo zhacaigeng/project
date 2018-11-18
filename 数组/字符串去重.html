@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var zhang = 'fdsffdaaklfjkljaaaa';
+        var newzhang = [];
+        for (var i = 0; i < zhang.length; i++) {
+            newzhang[i] = zhang[i];
+
+        }
+        // console.log(newzhang);
+        for (let j = 1; j < newzhang.length; j++) {
+            for (let k = 0; k < j; k++) {
+                if (newzhang[j] == newzhang[k]) {
+                    newzhang.splice(j, 1);
+                    k--;
+                }
+            }
+        }
+        var newstring = newzhang.join('');
+        console.log(newstring);
+    </script>
+</body>
+
+</html>

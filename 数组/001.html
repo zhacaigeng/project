@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var zhang = new Array(1,5,5,9,25)
+        // zhang[11]='nihao';
+        
+        // console.log(zhang.reverse());
+        // console.log(zhang);
+        // console.log(Array,typeof Array);
+        
+        var quchong = function(ele){
+            var len = ele.length;
+            var newArr = [];
+            var flag = 1;
+            for(var i = 0; i< ele.length; i++){
+                for(var j = 0; j < i; j++){
+                    if(ele[i] == ele[j]){
+                        flag=0;
+                    }
+                }
+                flag ? newArr.push(ele[i]):'';                
+                flag = 1;
+            }
+            console.log(newArr);
+
+        }
+        // new Array(1,2,3,8,8,8,8,9).quchong()
+        quchong([2,1,2,1,2,1,2,1,5,2,1,2,5,4,8,9,6,5,8,8,9,98])
+    </script>
+</body>
+</html>

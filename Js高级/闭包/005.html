@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function a() {
+            var num = 0;
+            return function () {
+                num++, console.log(num);
+                // ;
+            };
+        }
+        var b = {
+            fn: a()
+        }
+        b.fn(); //1
+        b.fn(); //2
+        b.fn(); //3
+        //bei 全局变量引用
+        // console.log(num);
+    </script>
+</body>
+
+</html>

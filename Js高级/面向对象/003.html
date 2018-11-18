@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function person1 (arguments) {
+            this.name = 'dongdong';
+        }
+        var p1 = new person1();
+        person1 = function  () {
+            this.sex = 48;
+        }
+        // person1.prototype = {
+        //     sex: 26,
+        // }
+        // console.log(p1.constructor);
+        console.log(p1.constructor);
+        function person2 (arguments) {
+            
+        }
+    </script>
+</body>
+</html>

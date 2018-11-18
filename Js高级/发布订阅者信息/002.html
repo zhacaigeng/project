@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var shoeObj = {
+            name:'zhangdongbin',
+            list:[],
+            listen: function  (fn) {
+                shoeObj.list.push(fn); // 订阅消息添加到缓存列表  
+                //list :[
+                //function (color) {console.log("颜色是：" + color)},
+                //function (color) {console.log("再次打印颜色是：" + color)},
+                //]              
+            },
+            trigger: function  () {
+                for (var i = 0, fn; fn = this.list[i++];) {
+                console.log(fn);
+                //fn = function (color) {console.log("颜色是：" + color)}
+                fn.apply(null, arguments);
+                // fn(e)
+                }
+            }
+        };
+
+
+        
+        // 小红订阅如下消息
+        shoeObj.listen(function (color) {
+            console.log("颜色是：" + color);
+        });
+
+        // 小花订阅如下消息
+        shoeObj.listen(function (color) {
+            console.log("再次打印颜色是：" + color);
+        });
+        shoeObj.trigger("红色");
+        // shoeObj.trigger("黑色", 42);
+    </script>
+</body>
+
+</html>

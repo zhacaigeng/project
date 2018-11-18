@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<form action="login.do?act=login" method="post" onsubmit="return check(this)">
+   用户帐号<input type=text name="userId" size="18" value="" ><br>
+   登录密码<input type="password" name="password" size="19" value=""/>      
+   <input type=submit name="submit1" value="登陆"> 
+</form> 
+<script type="text/javascript">
+    // function check(form) {
+    //      if(form.userId.value=='') {
+    //            alert("请输入用户帐号!");
+    //            form.userId.focus();
+    //            return false;
+    //       }
+    //       if(form.password.value==''){
+    //            alert("请输入登录密码!");
+    //            form.password.focus();
+    //            return false;
+    //        }
+    //        return true;
+    // }
+    var button = document.querySelector('input[name = "submit1"]');
+    var form = document.querySelector('form');
+
+    button.onclick = function (params) {
+        var str = form.sel
+    }
+    
+</script>
+</body>
+</html>

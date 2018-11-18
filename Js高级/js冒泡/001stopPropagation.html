@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #one{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+        #two{
+            height: 50px;
+            width: 50px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="one">
+        <div id="two"></div>
+    </div>
+    <script>
+        var one = document.getElementById('one');
+        var two = document.getElementById('two');
+        one.onclick = function  () {
+            console.log('i am one')
+
+        }
+        two.onclick = function  (e) {
+            console.log('i am two');
+            //stopPropagetion  是阻止冒泡的
+            e.stopPropagation();
+            //  preventDefault  是阻止默认事件的
+            e.preventDefault();
+            
+        }
+    </script>
+</body>
+</html>

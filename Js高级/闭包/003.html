@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function a() {
+            var b = null;
+            for (var i = 0; i < 3; i++) {
+                if (i === 1) {
+                    b = function () {
+                        console.log(i);
+                    }
+                }
+            }
+            return b;
+        }
+        a()();
+    </script>
+</body>
+
+</html>

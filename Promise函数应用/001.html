@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var text = function  (name) {
+            this.name = name;
+        }
+        console.log(new text('kaka'))//text {name: "kaka"}
+
+
+        var zhang = new Promise(function  (resolve, reject) {
+            setTimeout(() => {
+                // resolve('i am resolve')
+                reject('我是中国人')
+            }, 2000);
+        })
+        console.log(typeof zhang); //object
+        zhang.then(function  (message) {
+            console.log(message) //'i am resolve'
+        })
+        .catch(function  (reason) {
+            console.log(reason) //'我是中国人'
+        })
+        </script>
+</body>
+</html>

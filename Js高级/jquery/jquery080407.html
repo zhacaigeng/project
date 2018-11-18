@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+            div{
+                height: 100px;
+                        width: 100px;
+                        display: block;
+                        background-color: green
+            }
+
+
+        
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        //隔行显示
+        // $(d
+        window.onload = function name(params) {
+            function my$(params) {
+                return document.getElementById(params);
+            }
+            my$("zhang").onmouseover=function () {
+                // console.log('123')
+                $(this).animate({"opacity":1});
+            };
+            //离开
+            my$("zhang").onmouseout=function () {
+                // $(this).animate({"opacity":0});
+                // var zhang = $(this).css('width');
+                // console.log(zhang);
+                var zhang = document.getElementsByTagName('div')[0];
+                var id = zhang.getAttribute('id')
+                // var Wid = zhang.style.clientWidth;
+                // zhang.offsetHeight = '100px';
+                console.log(id);
+                // $(zhang).find('span').html('zhangzhang')
+                // $(zhang).find('span').text('zhangdongbin')
+            };
+            $('zhang').click(function () {
+
+            })
+
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="zhang" >nihoa 
+        <span></span>
+    </div>
+    
+</body>
+</html>

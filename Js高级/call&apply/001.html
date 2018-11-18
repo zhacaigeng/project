@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var zhang = function  () {
+            this.age = 20;
+        }
+        var dong =  function  () {
+            zhang.call(this);
+            console.log(this);
+        }
+        console.log(dong())
+        // console.log(new dong());
+
+        // zhang = function  () {
+        //     this.age = 33;
+        // }
+        // zhang.call(dong);
+        // console.log(dong);
+        // console.log(dong())
+    </script>
+</body>
+</html>

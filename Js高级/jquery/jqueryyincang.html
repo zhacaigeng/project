@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {padding: 0;margin: 0;}
+        ul { list-style-type: none;}
+
+        .parentWrap {
+            width: 200px;
+            text-align:center;
+
+        }
+
+        .menuGroup {
+            border:1px solid #999;
+            background-color:#e0ecff;
+        }
+
+        .groupTitle {
+            display:block;
+            height:20px;
+            line-height:20px;
+            font-size: 16px;
+            border-bottom:1px solid #ccc;
+            cursor:pointer;
+        }
+
+        .menuGroup > div {
+            height: 200px;
+            background-color:#fff;
+            display:none;   
+        }
+
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function name(params) {
+            $('.groupTitle').click(function name(params) {
+                $('.menuGroup').children('div').hide(200);
+                $(this).next('div').show(500);
+            })
+        })
+    </script>
+</head>
+<body>
+<ul class="parentWrap">
+    <li class="menuGroup">
+        <span class="groupTitle">我的好友</span>
+        <div>我的好友列表</div>
+    </li>
+    <li class="menuGroup">
+        <span class="groupTitle">土豪们</span>
+        <div>兰博基尼、布加迪、法拉利、劳斯莱斯</div>
+    </li>
+    <li class="menuGroup">
+        <span class="groupTitle">程序猿</span>
+        <div>Tom、Jerry、nll、fj</div>
+    </li>
+    <li class="menuGroup">
+        <span class="groupTitle">美工妹子</span>
+        <div>罗丝、朱迪、冰冰</div>
+    </li>
+</ul>
+</body>
+</html>

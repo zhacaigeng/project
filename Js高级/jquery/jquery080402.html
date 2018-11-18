@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        div{
+
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            
+        }
+        .zhang{
+            background-color: red;
+
+        }
+        .dong{
+            background-color: green;
+        }
+        
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        
+       $(document).ready(function name(params) {
+           function zhang(params) {
+               console.log('okle')
+           }
+           $('#btn').click(function name(params) {
+            //    console.log('123')
+            // //    
+            // $('div').toggleClass('dong')
+
+                // $('div').toggle(1000,zhang)    
+                // $('div').slideToggle(200,zhang)
+                // $('div').fadeToggle(2000,zhang)
+                $('div').fadeTo(1000,0.5)
+               
+           })
+
+       })
+    </script>
+</head>
+<body>
+<div class="zhang">
+
+</div>
+<input type="button" id="btn" value="点击一下">
+<input type="text"/>
+<input type="text"/>
+<input type="text"/>
+<input type="text"/>
+<input type="text"/>
+<script>
+    $(document).ready(function () {
+        var zhang = $('input:eq(2)')
+        console.log(zhang,typeof zhang);
+    })
+</script>
+</body>
+</html>

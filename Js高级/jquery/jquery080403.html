@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        div{
+
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            
+        }
+        .zhang{
+            background-color: red;
+
+        }
+        .dong{
+            background-color: green;
+        }
+        
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        //自定义动画
+       $(document).ready(function name(params) {
+           function zhang(params) {
+               console.log('okle')
+           }
+           $('#btn').click(function name(params) {
+               
+                $('.zhang').animate({
+                    width:500,
+                },300,function name(params) {
+                    document.getElementsByClassName('zhang')[0].style.backgroundColor = 'yellow'
+                });
+                $('.dong').animate({
+                    width:1000,
+                    color:'yellow'
+                },1000,'swing',function name(params) {
+                })
+               
+           })
+       })
+    </script>
+</head>
+<body>
+<div class="zhang">
+
+</div>
+<div class="dong"></div>
+<input type="button" id="btn" value="点击一下">
+</body>
+</html>

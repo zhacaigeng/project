@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        li {
+        font-size: 22px;
+    }
+    .zhang{
+        background-color: red;
+    }
+
+        
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        //隔行显示
+        $(document).ready(function name(params) {
+            $('li:odd').css('background-color','yellow');
+            $('li:even').css('background-color','green');
+                var color;
+                $('li').mouseenter(function name(params) {
+                    color = this.style.backgroundColor;
+                    $(this).css('background-color','orange');
+                })
+                $('li').mouseleave(function name(params) {
+                   $(this).css('background-color',color);
+                })
+
+        })
+        
+    </script>
+</head>
+<body>
+    <ul>
+        <li>火龙果</li>
+        <li>菠萝</li>
+        <li>柚子</li>
+        <li>橙子</li>
+        <li>牛油果</li>
+        <li>荔枝</li>
+        <li>木瓜</li>
+        <li>榴莲</li>
+        <li>柠檬</li>
+        <li>香蕉</li>
+    </ul>
+</body>
+</html>
