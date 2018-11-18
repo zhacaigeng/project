@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello React!</title>
+        
+    </head>
+
+    <body>
+
+        <div id="example"></div>
+        <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+        <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+        <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+        <script type="text/babel">
+        class Zhangsanfeng extends React.Component {
+            constructor(props){
+                super(props);
+                this.state = {date: new Date()}
+            }
+            componentDidMount() {
+                var  timeId = setInterval(() => {
+                    this.change()
+                }, 1000);
+            }
+            componentWillUnmount() {
+                clearInterval(this.timeId)
+            }
+            change(){
+                this.setState(
+                    {date: new Date()}
+                )
+            }
+            zhanghaha(){
+                console.log('123')
+            }
+            render(){
+                return(
+                    <div>
+                        <a href="#" onClick={this.zhanghaha}>我是一个兵</a>
+                        <div>{ this.state.date.toLocaleTimeString() }</div>
+                    </div>
+                )
+                
+            }
+        }
+        ReactDOM.render(
+            <Zhangsanfeng />,
+            document.getElementById('example')
+            
+        )
+        
+    </script>
+
+    </body>
+
+</html>

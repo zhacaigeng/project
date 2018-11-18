@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+    // const zhang = [3,6,8,5,4,6];
+    // const Toggle = zhang.map((ele)=> <ul>{ele}</ul>) 
+    // ReactDOM.render(
+    //     <Toggle />,
+    //     document.getElementById('example')
+    // )
+        
+    // function List (props) {
+    //         var zhang = props.arr.map(
+    //             (num, index) => <li key={index}>{num}</li>
+            
+    //         )
+    //         return <ul>{zhang}</ul>
+    // }
+
+
+    //     const newarr = [4, 6, 3, 7, 4, 3]
+        var zhang = [1,2,3,4,5,6,7,8,9]
+        function List (props) {
+        // body
+        var newzhang = props.arr.map((ele,index) => <li key={index} class={index}>{ele}</li>)
+            return <ul>{newzhang}</ul>
+        }
+        ReactDOM.render(
+            <List arr={zhang} />,
+            document.getElementById('example')
+        );
+    </script>
+</body>
+
+</html>

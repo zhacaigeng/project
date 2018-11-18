@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+        class Toggle extends React.Component{
+            constructor (props){
+                super(props);
+                this.state  = {isLoginOut: false};
+                this.handlerClick = this.handlerClick.bind(this);
+            }
+            handlerClick(){
+                if(this.state.isLoginOut){
+                    this.setState({isLoginOut: false})
+                }else{
+                    this.setState({isLoginOut: true})
+                }
+            }
+            render(){
+                const IfOut = this.state.isLoginOut;
+                let button;
+                // if(IfOut){
+                //     button = <LoginIn onClick={this.handlerClick}/>
+                // }else{
+                //     button = <LoginOut onClick={this.handlerClick}/>
+                // }
+                button = <LoginIn class={IfOut} onClick={this.handlerClick} />
+                return(
+                    <div>
+                        <Info iftrue = {this.state.isLoginOut}/>
+                        {button}
+                    </div>
+                )
+            }
+            
+        };
+        function Info (props) {
+            if(props.iftrue){
+                return <div>i am true</div>
+            }else{
+                return <div>i am false</div>
+            }
+        }
+        function LoginIn (props) {
+            // var prs = props.class.toString()
+                return <button onClick={props.onClick}>i am {props.class.toString()}</button>
+        };
+        // function LoginOut (props) {
+        //     return <button onClick={props.onClick}>i am out</button>
+            
+        // }
+      
+        ReactDOM.render(
+            <Toggle />,
+            document.getElementById('example')
+        )
+    </script>
+</body>
+
+</html>
