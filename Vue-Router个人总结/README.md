@@ -13,11 +13,11 @@ vue路由传参的三种基本方式
      name: 'Zhangdb',
      component: Zhangdb
    }
-很显然，需要在path中添加/:id来对应 $router.push 中path携带的参数。在子组件中可以使用来获取传递的参数值。
+需要在path中添加/:id来对应 $router.push 中path携参数。在子组件中可以使用获取参数值。
 
 this.$route.params.id
 方案二：
-父组件中：通过路由属性中的name来确定匹配的路由，通过params来传递参数。
+父组件中：通过属性中的name来确定路由匹配，通过params来传参。
 
        this.$router.push({
           name: 'Zhangdb',
@@ -25,7 +25,7 @@ this.$route.params.id
             id: id
           }
         })
- 不用:/id来传递参数了，因为父组件中，已经使用params来携带参数了。
+ 不用:/id来传递参数了，因为父组件已用params携带参数。
 
    {
      path: '/describe',
