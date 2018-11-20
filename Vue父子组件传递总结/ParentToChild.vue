@@ -2,6 +2,7 @@
 <template>
     <div>
         <child @sendToChild = 'SendTo'></child>
+        //       儿子           父亲
     </div>
 </template>
 
@@ -10,24 +11,19 @@
         el: "",
         data: function  () {
             return {
-                SendTo: '张三丰'
+                SendTo: 'i am father'
             }
         }
-
-
     }
 </script>
 
 // 子组件
-
 <script>
-    export default {
         el:"",
+        props:["sendToChild"]
         data: function  () {
             return {
-                *** : this.sendToChild
+                *** : this.sendToChild  //'i am father'
             }
-        },
-        pros:["sendToChild"]
-    }
+        },    
 </script>
