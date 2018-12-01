@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 500px;
+        height: 500px;
+        margin: 100px auto;
+        background: url('./images/bg1.jpg') no-repeat;
+        background-size: 100% 100%;
+
+
+    }
+    </style>
+</head>
+<body>
+    <select name="" id="zhang">
+        <option value="">共产国际</option>
+        <option value="">资本联盟</option>
+        <option value="">大西洋联盟</option>
+        <option value="">印度洋联盟</option>
+    </select>      
+    <div></div>
+    <script>
+        var select = document.querySelector('select');
+        
+        select.onchange = function name(params) {
+            var index = select.selectedIndex;
+            // var text = select.options[index].text;
+            var 
+            // alert('你确定加入'+ text + '  '+'?');
+            
+        }
+        // var guize = /^[A-Za-z\\d]{1,9}@[A-Za-z]{2}com/ ;
+        var guize =/(^[A-Za-z_-\d]{1,})+@([A-Za-z]{2})+(.com)$/
+        // var guize = 
+        var str = '525787311@qq_com';
+        var buer = guize.test(str);
+        console.log(buer);
+
+    </script>
+</body>
+</html>
