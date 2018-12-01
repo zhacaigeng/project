@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="message">
+        {{message | filters2}}
+    </div>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script>
+        Vue.filter('filters2', function  (arg) {
+            console.log("arg:" + arg)
+                    if (arg > 100) {
+                        return arg - 8;
+                    } else {
+                        return arg;
+                    }
+        })
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: 199,
+                priceCount: 0.8
+            },
+            // filters: {
+            //     filters2: function (arg) {
+            //         console.log("arg:" + arg)
+            //         if (arg > 100) {
+            //             return arg - 8;
+            //         } else {
+            //             return arg;
+            //         }
+            //     },
+                
+            // }
+        });
+    </script>
+
+</body>
+
+</html>

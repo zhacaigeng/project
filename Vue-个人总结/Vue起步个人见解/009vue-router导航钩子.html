@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <a href="#/zhang" v-if="san">你好</a>
+        <a href="#/zhangwuji">张无忌</a>
+        <a href="#/zhangsanfeng">张三丰</a>
+        <router-view></router-view>
+    </div>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script src="./node_modules/vue-router/dist/vue-router.js"></script>
+    <script>
+        function methodName (arguments) {
+            console.log('zhangdongbin');
+        }
+        methodName();
+        var chen = new Vue({
+            el: "#app",
+            data:function  () {
+                return{
+                    message:'zhang',
+                    san:true
+                }
+            },
+            router:new VueRouter({
+                routes:[
+                    {
+                        path:'/zhang',
+                        component:{
+                            template:"<div>我是一个兵</div>"
+                        },
+                        
+                    },
+                    {
+                        path:'/zhangsanfeng',
+                        component:{
+                            template:"<div>我是张三丰</div>"
+                        },
+                    },
+                    {
+                        path:'/zhangwuji',
+                        component:{
+                            template:"<div>我是张无忌</div>"
+                        },
+                    }
+                ]
+            }),
+            beforeCreate: function () {
+                console.group('------beforeCreate创建前状态------');
+                console.log("%c%s", "color:red", "el     : " + this.$el); //undefined
+                console.log("%c%s", "color:red", "data   : " + this.$data); //undefined 
+                console.log("%c%s", "color:red", "message: " + this.message)
+            },
+            created: function () {
+                console.group('------created创建完毕状态------');
+                console.log("%c%s", "color:red", "el     : " + this.$el); //undefined
+                console.log("%c%s", "color:red", "data   : " + this.$data); //已被初始化 
+                console.log("%c%s", "color:red", "message: " + this.message); //已被初始化
+            },
+            beforeMount: function () {
+                console.group('------beforeMount挂载前状态------');
+                console.log("%c%s", "color:red", "el     : " + (this.$el)); //已被初始化
+                console.log(this.$el);
+                console.log("%c%s", "color:red", "data   : " + this.$data); //已被初始化  
+                console.log("%c%s", "color:red", "message: " + this.message); //已被初始化  
+            },
+            mounted: function () {
+                console.group('------mounted 挂载结束状态------');
+                console.log("%c%s", "color:red", "el     : " + this.$el); //已被初始化
+                console.log(this.$el);
+                console.log("%c%s", "color:red", "data   : " + this.$data); //已被初始化
+                console.log("%c%s", "color:red", "message: " + this.message); //已被初始化 
+            },
+            beforeUpdate: function () {
+                this.san = false;
+                console.group('beforeUpdate 更新前状态===============》');
+                console.log("%c%s", "color:red", "el     : " + this.$el);
+                console.log(this.$el);
+                console.log("%c%s", "color:red", "data   : " + this.$data);
+                console.log("%c%s", "color:red", "message: " + this.message);
+            },
+            updated: function () {
+                console.group('updated 更新完成状态===============》');
+                console.log("%c%s", "color:red", "el     : " + this.$el);
+                console.log(this.$el);
+                console.log("%c%s", "color:red", "data   : " + this.$data);
+                console.log("%c%s", "color:red", "message: " + this.message);
+                // console.log(this.$options.destroyed[1]());
+            },
+            beforeDestroy: function () {
+                console.group('beforeDestroy 销毁前状态===============》');
+                console.log("%c%s", "color:red", "el     : " + this.$el);
+                console.log(this.$el);
+                console.log("%c%s", "color:red", "data   : " + this.$data);
+                console.log("%c%s", "color:red", "message: " + this.message);
+            },
+            destroyed: function () {
+                console.group('destroyed 销毁完成状态===============》');
+                console.log("%c%s", "color:red", "el     : " + this.$el);
+                console.log(this.$el);
+                console.log("%c%s", "color:red", "data   : " + this.$data);
+                console.log("%c%s", "color:red", "message: " + this.message)
+            }
+
+        })
+        // console.log(chen.$options.router);
+        // var routerzhang = chen.$options.router;
+        // routerzhang.beforeEach((to, from, next) => {
+        //     // if(to.path =='/zhang'){
+        //     //     next('/zhangwuji')
+        //     //     return;
+        //     // }
+        //     // next()
+        // })
+        
+    </script>
+</body>
+</html>

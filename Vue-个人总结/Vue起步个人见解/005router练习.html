@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #secondapp{
+            height: 100px;
+            width: 100px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <a href="#/home">home</a>
+        <a href="#/bar">bar</a>
+        <div id="secondapp" @click="zhang"></div>
+        <router-view></router-view>
+    </div>
+    <script src="../admin-vue/node_modules/vue/dist/vue.js"></script>
+    <script src="../admin-vue/node_modules/vue-router/dist/vue-router.js"></script>
+    <script>
+        var chen = new Vue({
+            el: '#app',
+            router: new VueRouter({
+                routes: [{
+                        path: '/',
+                        component: {
+                            template: '<h1>{{ title}}</h1>',
+                            data() {
+                                return {
+                                    title: '马自达'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        path: '/home',
+                        component: {
+                            template: '<h1>吉利</h1>'
+                        },
+                    },
+                    {
+                        path: '/bar',
+                        component: {
+                            template: '<h1>奇瑞</h1>'
+                        }
+                    },
+                ]
+            }),
+            watch:{
+                $route:function  () {
+                    // console.log(this.$route.path);
+                    if(this.$route.path == '/bar'){
+                        // console.log(' I am bar');
+                    }
+                }
+            },
+            methods:{
+                zhang:function  () {
+                    $router.push('/zhang')  
+                }
+            }
+        })
+        // console.log();
+        // var hello = [2,5,6,7,3];
+        // var helloo = hello.splice(3,1);
+        // console.log(helloo);
+    </script>
+</body>
+
+</html>
