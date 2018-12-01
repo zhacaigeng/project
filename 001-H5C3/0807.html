@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script src="jquery-1.12.4.js"></script>
+<body>
+
+    <input type="text" list="car" placeholder="请输入账号">
+
+
+    <datalist id="car">
+        <option>宝马</option>
+        <option>捷豹</option>
+        <option>保时捷</option>
+        <option>法拉利</option>
+        <option>宝马</option>
+        <option>豹子</option>
+    </datalist>
+
+    
+
+    <script>
+        var input = document.getElementsByTagName('input')[0];
+
+        input.oninput =function name(params) {
+
+           console.log(input.value);
+           
+        }
+        // input.onkeydown = function name(params) {
+        //     console.log('我down了')
+        // };
+        input.onkeypress = function name(params) {
+            console.log('我press了')
+        };
+        // input.onkeyup = function name(params) {
+        //     console.log('我up了')
+        // };
+
+
+        // $(input).change(function name(params) {
+            
+        //     console.log($(this).val());
+
+        // })
+        // $(input).on('click',function name(params) {
+        //     console.log('zhang先生')
+        // })
+        $(input).click(function name(params) {
+            console.log('dongdongdongdong')
+        })
+    </script>
+</body>
+</html>
