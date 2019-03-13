@@ -1,6 +1,6 @@
 # 鄙人邮箱
 
-## zhangjoy@126.com （欢迎大家提出异议，谢谢）
+## zhangdongbin@aliyun.com （欢迎大家提出异议，谢谢）
 
 
 
