@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 判断是否为iphoneX
+        function getIsIphonex () {
+            var u = navigator.userAgent;
+            var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+            if (isIOS) {
+                // ios
+
+                // iphoneX 分辨率为812和375的三倍
+                if (screen.height == 812 && screen.width == 375) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }else{
+                // android
+            }
+        };
+    </script>
+</body>
+</html>
