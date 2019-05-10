@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    
+        <div id='example'></div>
+        <script type="text/babel">
+            
+            // class WebSite extends React.Component{
+            //     handleClick(e){
+            //         console.log('this is', this);
+            //         console.log(e)
+            //     }
+            //     render(){
+            //         return (
+            //             <button onClick={this.handleClick()}>
+            //                 Click me
+            //             </button>
+            //         )
+            //     }
+            // }
+            // ReactDOM.render(
+            //     <WebSite />,
+            //     document.getElementById('example')
+            // )
+            class Toggle extends React.Component{
+                constructor(props){
+                    super(props);
+                    this.state = {
+                        isToggleOn: true
+                    };
+                    // this.handleClick = ()=>{
+                    //     console.log(this)
+                    //     // this.setState()
+                    // }
+                    console.log(this)
+                    // this.handleClick = ()=>{
+                    //     // console.log(this.handleClickZdb)
+                    //     this.handleClickZdb()
+                    // }
+                    this.handleClick = this.handleClickZdb.bind(this)
+                }
+                handleClickZdb(e){
+                    console.log('thisthisthis', this, e)
+                }
+                render(){
+                    return(
+                        <button onClick={this.handleClick}>
+                            {this.state.isToggleOn ? 'On' : 'Off'}
+                        </button>
+                    )
+                }
+            }
+
+            ReactDOM.render(
+                <Toggle />,
+                document.getElementById('example')
+            )
+        </script>
+    
+</body>
+</html>

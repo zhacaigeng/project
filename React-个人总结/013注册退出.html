@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    
+        <div id='example'></div>
+        <script type="text/babel">
+            class LoginCongtrol extends React.Component{
+                constructor(props){
+                    super(props);
+                    this.state = {
+                        ifLogin: false
+                    };
+                    this.buttonClick = this.ButtonCrtolClick.bind(this);
+                }
+                ButtonCrtolClick(){
+                    this.setState({
+                        ifLogin: !this.state.ifLogin
+                    });
+                    console.log(this.state.ifLogin)
+                }
+                
+                render(){
+                    return(
+                        <div>
+                            <NameCtrol data={this.state.ifLogin} />
+                            <ButtonCtrol zdbClick={this.buttonClick} data={this.state.ifLogin} />
+                        </div>
+                        
+                    )
+                }
+            }
+            function NameCtrol(props){
+                return(
+                    <h1>{props.data ? '点击退出' : '点击登陆'}</h1>
+                )
+            }
+            function ButtonCtrol(props){
+                // return(props.data ? <button onClick>退出</button> : <button>登陆</button>)
+                return(
+                    <button onClick={props.zdbClick}>{props.data ? '退出' : '登陆'}</button>
+                )
+                
+            }
+            ReactDOM.render(
+                <LoginCongtrol />,
+                document.getElementById('example')
+            )
+        </script>
+    
+</body>
+</html>

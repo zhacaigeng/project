@@ -13,31 +13,48 @@
     
         <div id='example'></div>
         <script type="text/babel">
-            class Zdb extends React.Component{
-                constructor(props){
-                    super(props);
-                    this.state = {
-                        date: new Date(),
-                    };
-                }
-                componentDidMount() {
-                    this.timeId = setInterval(() => this.tisk()
-                    , 1000);
-                }
-                tisk(){
-                    this.setState({
-                        date: new Date()
-                    })
-                }
+            // class Zdb extends React.Component{
+            //     constructor(props){
+            //         super(props);
+            //         this.state = {
+            //             date: new Date(),
+            //         };
+            //     }
+            //     componentDidMount() {
+            //         this.timeId = setInterval(() => this.tisk()
+            //         , 1000);
+            //     }
+            //     tisk(){
+            //         this.setState({
+            //             date: new Date()
+            //         })
+            //     }
+            //     render(){
+            //         return <div>{this.state.date.toLocaleTimeString()}</div>
+            //     }
+            // }
+
+            // ReactDOM.render(
+            //     // document.getElementById('exa')
+            //     // <h1>iamhero</h1>,
+            //     <Zdb />,
+            //     document.getElementById('example')
+            // )
+
+            // defaultProps 默认props的值 
+            class HelloMessage extends React.Component{
                 render(){
-                    return <div>{this.state.date.toLocaleTimeString()}</div>
+                    return (
+                        <h1>{this.props.name}</h1>
+                    )
                 }
             }
-
+            HelloMessage.defaultProps = {
+                name: 'Joy'
+            }
+            let element = <HelloMessage/>
             ReactDOM.render(
-                // document.getElementById('exa')
-                // <h1>iamhero</h1>,
-                <Zdb />,
+                element,
                 document.getElementById('example')
             )
         </script>
