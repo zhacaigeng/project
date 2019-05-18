@@ -1,0 +1,12 @@
+
+bnakAdmin/  
+# 该项目禁止上传
+sys*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
