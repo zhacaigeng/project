@@ -1,0 +1,21 @@
+.vcc-preview-file {
+    &__content {
+        text-align: center;
+        padding: 32px 0;
+    }
+
+    &__img {
+        min-height: 300px;
+        max-width: 500px;
+        max-height: 600px;
+    }
+    
+    &__default-img  {
+        font-size: 32px;
+    }
+
+    &__desc {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}

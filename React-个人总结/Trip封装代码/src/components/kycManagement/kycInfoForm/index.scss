@@ -1,0 +1,93 @@
+.vcc-kyc-form {
+    &-wrapper {
+        .ant-radio-group {
+            display: flex;
+            flex-direction: column;
+            .ant-radio-wrapper {
+                padding: 5px 0;
+            }
+        }
+    }
+
+    &-steps {
+        padding: 28px 48px 48px;
+    }
+
+    &-btn-wrapper {
+        margin-top: 48px;
+    }
+
+    &-group-title {
+        position: relative;
+        color: #212121;
+        padding-left: 8px;
+        font-weight: bold;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        font-size: 14px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 2px;
+            height: 1em;
+            background: #0086F6;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &__desc {
+            font-size: 12px;
+            font-weight: normal;
+            
+            &--warn {
+                color: #f5222d;
+            }
+        }
+    }
+
+    &__bank-list {
+        position: relative;
+    }
+
+    &__bank-group {
+        position: relative;
+        border: 2px dashed rgb(225, 231, 240);
+        padding-top: 24px;
+        border-radius: 4px;
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__del-bank-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &-approve-group {
+        margin-top: 24px;
+    }
+}
+
+.vcc-kyc-overview {
+    &__title {
+        font-size: 16px;
+        font-weight: bold;
+        background: #eee;
+        border-radius: 2px;
+        padding: 8px 0;
+        margin-bottom: 24px;
+        padding-left: 8px;
+        color: #212121;
+    }
+
+    &__panel {
+        background-color: #ffffff;
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}

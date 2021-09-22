@@ -1,0 +1,47 @@
+{
+  "name": "nfes-admin-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "config": {
+    "env": "fat",
+    "proxy-bypass-list": []
+  },
+  "scripts": {
+    "bootstrap": "npm i --registry http://registry.npm.release.ctripcorp.com/",
+    "start": "nfes start NODE_ENV=production",
+    "dev_no": "nfes start NODE_ENV=development",
+    "dev": "nfes start NODE_ENV=development NOOPEN=1",
+    "pub": "nfes pub NODE_ENV=production NOOPEN=1",
+    "inspect": "nodemon",
+    "build": "nfes build NODE_ENV=production",
+    "export": "nfes export"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "@ctrip/nfes": "^4.0.0",
+    "antd": "^3.26.20",
+    "axios": "^0.19.2",
+    "classnames": "2.2.6",
+    "formik": "^2.2.9",
+    "lodash": "^4.17.21",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "thousandify": "^1.0.2",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.6",
+    "@zeit/next-typescript": "^1.1.1",
+    "babel-plugin-import": "^1.12.0",
+    "babel-plugin-jsx-control-statements": "^4.1.0",
+    "less-loader": "^5.0.0",
+    "webpack": "^4.44.1",
+    "webpack-dev-middleware": "^3.7.2",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7"
+  }
+}

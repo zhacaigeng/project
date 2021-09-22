@@ -1,0 +1,22 @@
+.vcc-search-param {
+    padding: 0 28px 24px;
+    
+    .ant-form-item {
+        margin-bottom: 0;
+    }
+
+    &__row {
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__col {
+        max-width: 500px;
+
+        &--actions {
+            flex: 0 0 auto;
+            max-width: initial;
+        }
+    }
+}

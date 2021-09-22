@@ -1,0 +1,17 @@
+.ccp-batch-open-card {
+    &__count-descs {        
+        .ant-descriptions-item.error {
+            .ant-descriptions-item-label,
+            .ant-descriptions-item-content {
+                color: #f5222d;
+            }            
+        }
+
+        .ant-descriptions-row>td {
+            padding-bottom: 0;            
+        }
+        .ant-descriptions-item-content {
+            font-weight: bold;
+        }
+    }
+}

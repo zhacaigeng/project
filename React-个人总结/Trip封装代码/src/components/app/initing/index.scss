@@ -1,0 +1,15 @@
+.vcc-app-loading {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__error {
+        text-align: center;
+        transform: translateY(-50%);
+        
+        &-tip {
+            font-weight: bold;
+        }
+    }
+}

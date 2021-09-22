@@ -1,0 +1,46 @@
+.vcc-header {
+    &.ant-layout-header {
+        position: relative;
+        z-index: 10;
+        max-width: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background: #fff;
+        color: rgb(84, 84, 94);
+        padding: 0 24px; 
+        border-bottom: 1px solid rgb(235, 236, 240);
+    }
+   
+    &__item {    
+        padding: 0 24px;   
+        flex: 0 0 auto; 
+
+        &-page-tabs {
+            flex: 1 1 0;
+            box-sizing: border-box;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+    
+            .ant-tabs-bar {
+                border: 0;
+                margin-bottom: -1px;
+            }
+        }
+    }
+
+    &__user {
+        cursor: pointer;
+    }
+
+    &__avatar {
+        margin-right: 8px;
+    }
+    
+    &__open-page-tabs {
+        max-width: 800px; // TODO a better way ?
+    }
+}

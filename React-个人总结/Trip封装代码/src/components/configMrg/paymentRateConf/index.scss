@@ -1,0 +1,64 @@
+
+.steps-action {
+    margin-top: 24px;
+}
+.TabPane1{
+    width: 70%;
+    display: flex;
+    &>div{
+        border: 1px solid #d9d9d9;
+        &>.title{
+            background: #f8f8f8;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 22px;
+            padding: 9px 20px;
+            border-bottom: 1px solid #d9d9d9;
+        }
+        &>.contentIndex{
+            display: flex;
+            &>.content{
+                padding: 9px 20px;
+                box-sizing: border-box;
+                border: 1px solid #d9d9d9;
+                border-width: 0 0 1px;
+            }
+            &>.left{
+                flex: 1;
+                background: #f8f8f8;
+                min-width: 150px;
+                border-right: 1px solid #d9d9d9;
+            }
+            &>.right{
+                flex: 5;
+            }
+        }
+    }
+    .RadioGroup{
+        &>label{
+            display: block;
+        }
+    }
+}
+.RadioGroup{
+    width: 100%;
+    .currencyIndex{
+        padding: 13px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.modalCont{
+    &>.index{
+        div{
+            color: #000000;
+            margin-bottom: 24px;
+            &:first-child{
+                margin-bottom: 3px;
+                color: #616161;
+            }
+        }
+    }
+    
+}
+  

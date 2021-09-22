@@ -1,0 +1,60 @@
+.steps-content {
+    margin-top: 16px;
+    border: 1px dashed #e9e9e9;
+    border-radius: 6px;
+    background-color: #fafafa;
+    min-height: 200px;
+    text-align: center;
+    padding-top: 80px;
+}
+  
+.steps-action {
+    margin-top: 24px;
+}
+.TabPane1{
+    width: 70%;
+    display: flex;
+    &>div{
+        border: 1px solid #d9d9d9;
+        &>.title{
+            background: #f8f8f8;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 22px;
+            padding: 9px 20px;
+        }
+    }
+    .RadioGroup{
+        &>label{
+            display: block;
+        }
+    }
+}
+  
+.vcc-userlog-list {
+    td {
+        word-break: break-all;
+    }
+
+    &__col-req {
+        max-width: 350px;
+        max-height: 100px;
+        overflow: hidden;
+    }
+}
+
+.vcc-uselog-detail {
+    .ant-descriptions-item-label {
+        font-weight: bold;
+    }
+    
+    .ant-descriptions-item-content {
+        word-break: break-all;
+    }
+}
+
+.vcc-userlog-detail-req {
+    max-height: 400px;
+    max-width: 600px;
+    overflow: scroll;
+}
