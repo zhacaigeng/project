@@ -1,6 +1,6 @@
 # 鄙人邮箱
 
-## z_db@oulook.com （欢迎大家提出异议，谢谢）
+## z_db@outlook.com （欢迎大家提出异议，谢谢）
 
 
 
